@@ -125,6 +125,33 @@ img{ max-width:100%; display:block; }
   .caption-block{ position:static; max-width:none; margin-top:-4px; }
 }
 
+/* ---- Caption position variant ---- */
+.caption-bottom-left{
+  top:auto; bottom:8%;
+}
+
+/* ---- Stacked sections: full image on top, text below (never overlaid) ---- */
+.stacked{ background:var(--paper); }
+.stacked-image img{ width:100%; }
+.stacked-text{
+  background:var(--navy);
+  color:#fff;
+  padding:3.2rem 3.2rem 3.6rem;
+}
+.stacked-text.two-col{
+  display:grid; grid-template-columns:1fr 1fr; gap:3rem;
+}
+.stacked-text h3{
+  font-family:var(--display); font-weight:500; font-size:1.3rem;
+  margin:0.5rem 0 0.6rem; color:#fff;
+}
+.stacked-text p{ font-size:0.92rem; color:#c6d2d8; }
+.stacked-text .caption-index{ color:var(--sand); }
+@media (max-width:720px){
+  .stacked-text.two-col{ grid-template-columns:1fr; gap:2rem; }
+  .stacked-text{ padding:2.4rem 1.8rem 2.8rem; }
+}
+
 /* ---- Split sections ---- */
 .split{
   display:grid; grid-template-columns:1.3fr 1fr;
